@@ -1,0 +1,36 @@
+﻿@model MVCEmployeeApp.Models.UpdateEmployeeViewModel
+@{
+}
+
+<h1>Edit Employee</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email Address</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Age</label>
+        <input type="number" class="form-control" asp-for="Age">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Job Position</label>
+        <input type="text" class="form-control" asp-for="JobPosition">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">City</label>
+        <input type="text" class="form-control" asp-for="City">
+    </div>
+    <button type="submit" class="btn btn-primary" asp-action="View">Submit</button>
+
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Employees">Delete</button>
+    <br/>
+    <button type="submit" class="btn btn-primary mt-3" asp-action="PDF">Generate PDF</button>
+</form>
